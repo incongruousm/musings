@@ -100,7 +100,7 @@
     <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
 </code></pre></div><p>Finally, I have a lightweight server (13.5Mb) that will stream FM radio to any audio device in my house. It may have been cheaper, and would certainly have been easier, to just buy a £10 FM radio from Amazon - but where&rsquo;s the fun in that?</p>
 <h3 id="hardware-troubles">Hardware troubles</h3>
-<p>After much trial and error through this process I&rsquo;m not 100% certain whether the steps below were ultimately required. However, at some stage I was having issues with the container &ldquo;seeing&rdquo; the SDR dongle. A bit of research suggested creating a UDEV rules file:</p>
+<p>After much trial and error through this process I&rsquo;m not 100% certain whether the steps below were ultimately required. However, at some stage I was having issues with the container &ldquo;seeing&rdquo; the SDR dongle. A bit of research suggested creating a UDEV rules file on the Docker host:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/udev/rules.d/20-rtlsdr.rules
 </code></pre></div><p>Adding the hardware:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">SUBSYSTEM==&#34;usb&#34;, ATTRS{idVendor}==&#34;0bda&#34;, ATTRS{idProduct}==&#34;2838&#34;, MODE=&#34;0666&#34;, GROUP=&#34;plugdev&#34;
@@ -174,7 +174,7 @@ sudo udevadm trigger
 
 		<div class="e-content">
 			 <p>Settling in for Hercules at the Theatre Royal, Drury Lane. Should be a fun show!</p>
-<p><img src="https://jason.dea.bz/uploads/2026/pxl-20260611-131201760.jpg" alt="A grand theater stage is set with a backdrop depicting an ornate, glowing amphora labeled Hercules."></p>
+<p><img src="https://cdn.uploads.micro.blog/10150/2026/pxl-20260611-131201760.jpg" alt="A grand theater stage is set with a backdrop depicting an ornate, glowing amphora labeled Hercules."></p>
 
 		</div>
 	  </div>
