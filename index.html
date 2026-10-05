@@ -2,7 +2,7 @@
 <html>
 
   <head>
-	<meta name="generator" content="Hugo 0.91.2" />
+	<meta name="generator" content="Hugo 0.158.0">
 
   <title>
       
@@ -21,6 +21,29 @@
 <div class="h-feed">
 
 	
+	
+	  <div class="h-entry">
+		
+
+		<a href="https://jason.dea.bz/2026/09/21/practical-magic-i-kind-of/" class="u-url"><time class="dt-published" datetime="2026-09-21 18:01:04 &#43;0100">Sep 21, 2026</time></a>
+
+		<div class="e-content">
+			 <p><a href="https://www.themoviedb.org/movie/6435-practical-magic">Practical Magic</a> - <em>2026-09-19</em> - I kind of enjoyed this. With Sandra Bullock involved, I was predisposed, but this was some fun nonsense, with great 90s vibes. Not sure how I missed it back in the day. At 105 minutes it doesn&rsquo;t outstay its welcome and is a nice way to pass a quiet afternoon or evening. 🎥</p>
+<span class="og-embed-portrait">
+<blockquote>
+<p><img src="https://jason.dea.bz/uploads/2026/practical-magic-movie-poster.jpg" alt="Movie poster for &ldquo;Practical Magic&rdquo; featuring close-ups of Sandra Bullock and Nicole Kidman above a glowing row of tall candles, with silhouettes of women wearing witch hats holding umbrellas below."></p>
+<p><a href="https://www.themoviedb.org/">The Movie Database</a></p>
+<p><a href="https://www.themoviedb.org/movie/6435-practical-magic">Practical Magic</a></p>
+<p>Sally and Gillian Owens, born into a magical family, have mostly avoided witchcraft themselves. But
+when Gillian&rsquo;s vicious boyfriend, Jimmy Angelov, dies unexpectedly, the Owens sisters give themselves
+a crash course in hard magic. With policeman Gary Hallet growing suspicious, the girls struggle to
+resurrect Angelov &ndash; and unwittingly inject his corpse with an evil spirit that threatens to end their
+family line.</p>
+</blockquote>
+</span>
+
+		</div>
+	  </div>
 	
 	  <div class="h-entry">
 		
@@ -59,7 +82,7 @@
 <p><a href="https://www.themoviedb.org/">The Movie Database</a></p>
 <p><a href="https://www.themoviedb.org/movie/1208348-rental-family">Rental Family</a></p>
 <p>An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese &lsquo;rental family&rsquo; agency,
-playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the
+playing stand-in roles for strangers. As he immerses himself in his clients&rsquo; worlds, he begins to form genuine bonds that blur the
 lines between performance and reality.</p>
 </blockquote>
 </span>
@@ -112,8 +135,8 @@ flying his old Cessna, it sparks a hunt for the provenance of the sound.</p>
 <p><img src="https://jason.dea.bz/uploads/2026/mutiny-movie-poster.jpg" alt="Action movie poster with the word MUTINY in large white text across a gloomy, overcast sky. In the foreground, Jason Statham leans dynamic body-weight off the side of a large ship hull, holding a thick steel cable in one hand and pointing a black handgun downward with the other. Ocean waves spray up around the ship&rsquo;s rusty anchor mechanism. In the turbulent sea behind him, two naval warships travel across the water."></p>
 <p><a href="https://www.themoviedb.org/">The Movie Database</a></p>
 <p><a href="https://www.themoviedb.org/movie/1288445-mutiny">Mutiny</a></p>
-<p>After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a
-one-man crusade to avenge his boss' death only to discover an international conspiracy.</p>
+<p>After witnessing his billionaire boss&rsquo; murder and being framed for the crime, Cole Reed boards a cargo ship on a
+one-man crusade to avenge his boss&rsquo; death only to discover an international conspiracy.</p>
 </blockquote>
 </span>
 
@@ -181,97 +204,97 @@ unrecognisable surroundings.</p>
 			 <p>As a dotnet (C#) developer my typical development environment is Windows, VS Code (and full VS), dotnet, and PowerShell. Usually, with a side of SQL Server when I need a database. That stack has been the core of my working life for some time. However, I&rsquo;ve always had an interest in the Linux platform and have dabbled here and there with various home servers and occasional dual-boots.</p>
 <p>With the <a href="https://learn.microsoft.com/en-us/windows/wsl/" title="Windows Subsystem for Linux Documentation">Windows Subsystem for Linux</a> it&rsquo;s never been easier for a Windows user to investigate Linux, and with pretty much my entire day-to-day toolchain now being cross-platform I wanted to experiment more with a Linux-based developer experience.</p>
 <p>Getting a WSL-based Ubuntu install up and running turns out to be as simple as <code>wsl --install</code>. This one command downloaded and installed Ubuntu (26.04 resolute), and dropped me straight into a bash prompt. Job 1 any time I install Linux is to ensure everything is up-to-date:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
-sudo apt upgrade
-</code></pre></div><h2 id="installing-dotnet">Installing dotnet</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt upgrade
+</span></span></code></pre></div><h2 id="installing-dotnet">Installing dotnet</h2>
 <p>For me, the dotnet SDK is central to everything. <code>apt search dotnet-sdk</code> revealed that only dotnet 10.0 was available via the package manager. MS only make a subset of dotnet SDK versions available for each Ubuntu version. We currently build on dotnet 8.0 so I needed to add the backport repository which can be used to make a broader array of older versions available:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:dotnet/backports
-</code></pre></div><p>This is where the first stumble arose with a bunch of certificate failures. Attempting to update the certificate store yielded no changes:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo update-ca-certificates
-Updating certificates in /etc/ssl/certs...
-<span style="color:#ae81ff">0</span> added, <span style="color:#ae81ff">0</span> removed; <span style="color:#66d9ef">done</span>.
-Running hooks in /etc/ca-certificates/update.d...
-<span style="color:#66d9ef">done</span>.
-</code></pre></div><p>Then I remembered the corporate man in the middle VPN, disconnecting that solved the problem and from there the dotnet install was simple.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install dotnet-sdk-8.0
-sudo apt install dotnet-sdk-10.0
-</code></pre></div><h2 id="intstalling-bitwarden">Intstalling BitWarden</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo add-apt-repository ppa:dotnet/backports
+</span></span></code></pre></div><p>This is where the first stumble arose with a bunch of certificate failures. Attempting to update the certificate store yielded no changes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo update-ca-certificates
+</span></span><span style="display:flex;"><span>Updating certificates in /etc/ssl/certs...
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> added, <span style="color:#ae81ff">0</span> removed; <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>Running hooks in /etc/ca-certificates/update.d...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>.
+</span></span></code></pre></div><p>Then I remembered the corporate man in the middle VPN, disconnecting that solved the problem and from there the dotnet install was simple.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install dotnet-sdk-8.0
+</span></span><span style="display:flex;"><span>sudo apt install dotnet-sdk-10.0
+</span></span></code></pre></div><h2 id="intstalling-bitwarden">Intstalling BitWarden</h2>
 <p>The WSL Ubuntu installation comes with git pre-installed, but I keep my SSH keys in BitWarden. This was a somewhat trickier process than I&rsquo;d hoped and I&rsquo;m not entirely happy with the end result. The install instructions for <a href="https://bitwarden.com/en-gb/help/cli/" title="Password Manager CLI">BitWarden&rsquo;s Linux CLI</a> use a downloaded zip file. I wanted something scriptable and repeatable, and the process had a couple of tool dependencies:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install jq
-sudo apt install unzip
-</code></pre></div><p>With those in place, we can fetch release information from github, download the latest CLI version, and install the <code>bw</code> CLI utility.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Determine and download the latest available version</span>
-VER<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>curl -H <span style="color:#e6db74">&#34;Accept: application/vnd.github+json&#34;</span> https://api.github.com/repos/bitwarden/clients/releases | jq  -r .<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>.name | sed <span style="color:#e6db74">&#39;s:.*v::&#39;</span><span style="color:#66d9ef">)</span>
-curl -LO <span style="color:#e6db74">&#34;https://github.com/bitwarden/clients/releases/download/cli-v{</span>$VER<span style="color:#e6db74">}/bw-linux-{</span>$VER<span style="color:#e6db74">}.zip&#34;</span>
-
-<span style="color:#75715e"># Unzip the contents</span>
-unzip bw-linux-*.zip
-
-<span style="color:#75715e"># Mark the file executable &amp; tidy up</span>
-chmod +x ./bw
-rm bw-linux-*.zip
-
-<span style="color:#75715e"># Move the binary so it&#39;s on the path and verify</span>
-sudo mv ./bw /usr/local/bin
-bw --version
-</code></pre></div><p>So far, so good. Then <code>bw login</code> failed with a &ldquo;No providers available for this client.&rdquo; error. The BW CLI only supports <em>some</em> of the available 2FA methods, and none of the options that I have configured. So, back to the web vault to add my Yubikey as a 2FA option and problem solved.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install jq
+</span></span><span style="display:flex;"><span>sudo apt install unzip
+</span></span></code></pre></div><p>With those in place, we can fetch release information from github, download the latest CLI version, and install the <code>bw</code> CLI utility.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Determine and download the latest available version</span>
+</span></span><span style="display:flex;"><span>VER<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>curl -H <span style="color:#e6db74">&#34;Accept: application/vnd.github+json&#34;</span> https://api.github.com/repos/bitwarden/clients/releases | jq  -r .<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>.name | sed <span style="color:#e6db74">&#39;s:.*v::&#39;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>curl -LO <span style="color:#e6db74">&#34;https://github.com/bitwarden/clients/releases/download/cli-v{</span>$VER<span style="color:#e6db74">}/bw-linux-{</span>$VER<span style="color:#e6db74">}.zip&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Unzip the contents</span>
+</span></span><span style="display:flex;"><span>unzip bw-linux-*.zip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mark the file executable &amp; tidy up</span>
+</span></span><span style="display:flex;"><span>chmod +x ./bw
+</span></span><span style="display:flex;"><span>rm bw-linux-*.zip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Move the binary so it&#39;s on the path and verify</span>
+</span></span><span style="display:flex;"><span>sudo mv ./bw /usr/local/bin
+</span></span><span style="display:flex;"><span>bw --version
+</span></span></code></pre></div><p>So far, so good. Then <code>bw login</code> failed with a &ldquo;No providers available for this client.&rdquo; error. The BW CLI only supports <em>some</em> of the available 2FA methods, and none of the options that I have configured. So, back to the web vault to add my Yubikey as a 2FA option and problem solved.</p>
 <h2 id="accessing-git">Accessing Git</h2>
 <p>This is where things got interesting. Ideally, I&rsquo;d like BitWarden integrated as the source for my SSH keys under Linux. In theory this is possible, but I had no joy. I think it&rsquo;s also, in theory, possible to offload to the host Windows SSH agent, but I couldn&rsquo;t get that to work either.</p>
 <p>So, the less than ideal approach was to simply copy the SSH key out of BitWarden, which somewhat defeats the point of having it in the in the first place.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bw list items --search github
-bw get item &lt;ssh-item-id&gt; | jq -r <span style="color:#e6db74">&#39;.sshKey.privateKey&#39;</span> | ssh-add -
-</code></pre></div><p>With an SSH key in place, all that remained was to clone a repo - &ldquo;Could not open a connection to your authentication agent.&rdquo; 🙁</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bw list items --search github
+</span></span><span style="display:flex;"><span>bw get item &lt;ssh-item-id&gt; | jq -r <span style="color:#e6db74">&#39;.sshKey.privateKey&#39;</span> | ssh-add -
+</span></span></code></pre></div><p>With an SSH key in place, all that remained was to clone a repo - &ldquo;Could not open a connection to your authentication agent.&rdquo; 🙁</p>
 <p>This it turned out was down to the SSH agent not running. <code>ssh-agent</code> should probably have worked to kick it off, but Ubuntu didn&rsquo;t seem to interpret this correctly so I needed to get more explicit: <code>eval $(ssh-agent)</code>.</p>
 <p>Git was now able to clone the repository, then after a quick directory change the real magic happened. A simple <code>code .</code> launched VS Code with the back-end running on Ubuntu, and the front-end in Windows.</p>
 <h2 id="installing-powershell">Installing PowerShell</h2>
 <p>The final piece (for now) was to install PowerShell. Microsoft provides <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.6" title="Install PowerShell 7 on Ubuntu">instructions for installing PowerShell on Ubuntu</a>, so this step is, in theory, straight-forward.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># Update the list of packages and install pre-requisite packages.</span>
-sudo apt-get update
-sudo apt-get install -y wget apt-transport-https software-properties-common
-
-<span style="color:#75715e"># Get the installed version of Ubuntu</span>
-source /etc/os-release
-
-<span style="color:#75715e"># Download and register the Microsoft repository keys</span>
-wget -q https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-
-<span style="color:#75715e"># Update the list of packages after we added packages.microsoft.com</span>
-sudo apt-get update
-
-<span style="color:#75715e"># Install and start PowerShell</span>
-sudo apt-get install -y powershell
-pwsh
-</code></pre></div><p>Well, this didn&rsquo;t work. ☹️</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update the list of packages and install pre-requisite packages.</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y wget apt-transport-https software-properties-common
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get the installed version of Ubuntu</span>
+</span></span><span style="display:flex;"><span>source /etc/os-release
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download and register the Microsoft repository keys</span>
+</span></span><span style="display:flex;"><span>wget -q https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>rm packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update the list of packages after we added packages.microsoft.com</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install and start PowerShell</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install -y powershell
+</span></span><span style="display:flex;"><span>pwsh
+</span></span></code></pre></div><p>Well, this didn&rsquo;t work. ☹️</p>
 <p>It seems that not all versions of <code>packages-microsoft-prod.deb</code> result in a package repository containing PowerShell. So the install command failed. By the time I&rsquo;d discovered this I&rsquo;d messed around a fair bit, so needed to clear out the repository and keys so that there was a &ldquo;clean slate&rdquo; to start again.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Remove lists/sources and keys</span>
-sudo rm -f /etc/apt/sources.list.d/*microsoft*
-sudo rm -f /etc/apt/trusted.gpg.d/microsoft*.gpg
-sudo rm -f /etc/apt/keyrings/microsoft*.gpg
-
-<span style="color:#75715e"># Purge dpkg</span>
-sudo dpkg -P packages-microsoft-prod
-
-<span style="color:#75715e"># Clear up apt</span>
-sudo rm -f /var/lib/apt/lists/*microsoft*
-sudo apt update
-
-<span style="color:#75715e"># Verify the removal</span>
-grep -r <span style="color:#e6db74">&#34;packages.microsoft.com&#34;</span> /etc/apt/
-</code></pre></div><p>I have Ubuntu 26.04 installed, but had to add the repository info for 22.04 to find a PowerShell version I could install.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo apt update
-
-<span style="color:#75715e"># Do we have a PowerShell package?</span>
-apt search powershell
-
-<span style="color:#75715e"># Yes! Finally, the package is available, so install it...</span>
-sudo apt-get install -y powershell
-</code></pre></div><p>After a few road-bumps I had VS Code, dotnet, git, and PowerShell all running on Ubuntu under WSL. All that remained was to flip from <code>bash</code> to <code>pwsh</code> as my default shell and everything would start to feel very familiar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Remove lists/sources and keys</span>
+</span></span><span style="display:flex;"><span>sudo rm -f /etc/apt/sources.list.d/*microsoft*
+</span></span><span style="display:flex;"><span>sudo rm -f /etc/apt/trusted.gpg.d/microsoft*.gpg
+</span></span><span style="display:flex;"><span>sudo rm -f /etc/apt/keyrings/microsoft*.gpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Purge dpkg</span>
+</span></span><span style="display:flex;"><span>sudo dpkg -P packages-microsoft-prod
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Clear up apt</span>
+</span></span><span style="display:flex;"><span>sudo rm -f /var/lib/apt/lists/*microsoft*
+</span></span><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify the removal</span>
+</span></span><span style="display:flex;"><span>grep -r <span style="color:#e6db74">&#34;packages.microsoft.com&#34;</span> /etc/apt/
+</span></span></code></pre></div><p>I have Ubuntu 26.04 installed, but had to add the repository info for 22.04 to find a PowerShell version I could install.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Do we have a PowerShell package?</span>
+</span></span><span style="display:flex;"><span>apt search powershell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Yes! Finally, the package is available, so install it...</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install -y powershell
+</span></span></code></pre></div><p>After a few road-bumps I had VS Code, dotnet, git, and PowerShell all running on Ubuntu under WSL. All that remained was to flip from <code>bash</code> to <code>pwsh</code> as my default shell and everything would start to feel very familiar.</p>
 <p><code>chsh</code>, enter password, set to <code>/usr/bin/pwsh</code>. Done.</p>
 		</div>
 	  </div>
@@ -514,74 +537,74 @@ forces with him to prove there&rsquo;s life beyond our understanding.</p>
 <p>I really wanted to get rtl_fm_streamer running as a little service on my network that I could &ldquo;tune&rdquo; to from devices around the house, so I needed to run it on a Linux server. This seemed a perfect chance to start learning Docker - A tiny <a href="https://www.alpinelinux.org/">alpine linux</a> base, with rtl_fm_streamer running on top.</p>
 <h3 id="dockerfile">Dockerfile</h3>
 <p>After much reading and trial and error I settled on the <a href="https://docs.docker.com/reference/dockerfile/">dockerfile</a> below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#75715e"># Build rtl_fm_streamer</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine:3.16 AS builder</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk add --no-cache <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    build-base <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    cmake <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    git <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    libusb-dev <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    libev-dev <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    librtlsdr-dev<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /tmp/build</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> git clone https://github.com/AlbrechtL/rtl_fm_streamer.git . <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> mkdir build <span style="color:#f92672">&amp;&amp;</span> cd build <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> cmake .. -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DINSTALL_UDEV_RULES<span style="color:#f92672">=</span>ON -Wno-dev <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> make<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Create container</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine:3.23</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk add --no-cache <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    libusb <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    libev <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    librtlsdr<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /tmp/build/build/src/rtl_fm_streamer /usr/local/bin/rtl_fm_streamer<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">HEALTHCHECK --interval=30s --timeout=5s </span>--start-period<span style="color:#f92672">=</span>10s --retries<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  CMD pgrep rtl_fm_streamer<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 2346 2345</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> addgroup -S sdrgroup <span style="color:#f92672">&amp;&amp;</span> adduser -S sdruser -G sdrgroup <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> addgroup sdruser dialout<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> sdruser</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [<span style="color:#e6db74">&#34;rtl_fm_streamer&#34;</span>]<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>rtl_fm_streamer had some build dependencies that were only available on an older alpine image. So, we start with that as a build container, fetch the rtl_fm_streamer source and run the build.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#75715e"># Build rtl_fm_streamer</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">alpine:3.16</span> <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">builder</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> apk add --no-cache <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    build-base <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    cmake <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    git <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    libusb-dev <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    libev-dev <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    librtlsdr-dev<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WORKDIR</span> <span style="color:#e6db74">/tmp/build</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> git clone https://github.com/AlbrechtL/rtl_fm_streamer.git . <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> mkdir build <span style="color:#f92672">&amp;&amp;</span> cd build <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> cmake .. -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DINSTALL_UDEV_RULES<span style="color:#f92672">=</span>ON -Wno-dev <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> make<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># Create container</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">alpine:3.23</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> apk add --no-cache <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    libusb <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    libev <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    librtlsdr<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /tmp/build/build/src/rtl_fm_streamer /usr/local/bin/rtl_fm_streamer<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">HEALTHCHECK</span> --interval<span style="color:#f92672">=</span>30s --timeout<span style="color:#f92672">=</span>5s --start-period<span style="color:#f92672">=</span>10s --retries<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  CMD pgrep rtl_fm_streamer<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">EXPOSE</span> <span style="color:#e6db74">2346</span> <span style="color:#ae81ff">2345</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> addgroup -S sdrgroup <span style="color:#f92672">&amp;&amp;</span> adduser -S sdruser -G sdrgroup <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> addgroup sdruser dialout<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">USER</span> <span style="color:#e6db74">sdruser</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ENTRYPOINT</span> [<span style="color:#e6db74">&#34;rtl_fm_streamer&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>rtl_fm_streamer had some build dependencies that were only available on an older alpine image. So, we start with that as a build container, fetch the rtl_fm_streamer source and run the build.</p>
 <p>To avoid keeping that in the final image, and to ensure an up-to-date alpine linux, we install the runtime dependencies, copy the built binary, and set-up the health check and ports on a clean new base image. There&rsquo;s also a dedicated user to aid security, they&rsquo;re in the <code>dialout</code> group to allow access to the USB device.</p>
 <p>The health check is a little rudimentary. Ideally, I&rsquo;d prefer to test the server is responding to connections. So, I tried:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#66d9ef">CMD</span> echo <span style="color:#e6db74">&#34;PING&#34;</span> | nc -z 0.0.0.0 <span style="color:#ae81ff">2346</span> <span style="color:#f92672">||</span> exit <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>This had the side-effect of triggering a container restart every time the health check ran. It seemed to panic the streaming server causing it to raise an exception, so I fell back to a simple process check.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">CMD</span> echo <span style="color:#e6db74">&#34;PING&#34;</span> | nc -z 0.0.0.0 <span style="color:#ae81ff">2346</span> <span style="color:#f92672">||</span> exit <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>This had the side-effect of triggering a container restart every time the health check ran. It seemed to panic the streaming server causing it to raise an exception, so I fell back to a simple process check.</p>
 <h3 id="docker-compose">Docker Compose</h3>
 <p>With the dockerfile working well I wanted to simplify container creation with <a href="https://docs.docker.com/compose/">docker compose</a>. This was kinda cool, the small snippet of <code>YAML</code> below means I can now simply run <code>docker compose up</code> and have a fresh image built, using the latest source, and then stood up as a running container on my Docker host.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">services</span>:
-  <span style="color:#f92672">rtl-fm-streamer</span>:
-    <span style="color:#f92672">build</span>:
-      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">.</span>
-      <span style="color:#f92672">dockerfile</span>: <span style="color:#ae81ff">rtl_fm_streamer.dockerfile</span>
-    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">rtl-fm-streamer:${IMAGE_TAG:-latest}</span>
-    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">radio_streamer</span>
-    <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">rtl-radio-test</span>
-    <span style="color:#f92672">devices</span>:
-      - <span style="color:#e6db74">&#34;/dev/bus/usb:/dev/bus/usb&#34;</span>
-    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">bridge</span>
-    <span style="color:#f92672">ports</span>:
-      - <span style="color:#e6db74">&#34;2346:2346&#34;</span> <span style="color:#75715e"># HTTP Stream</span>
-      - <span style="color:#e6db74">&#34;2345:2345&#34;</span> <span style="color:#75715e"># JSON-RPC</span>
-    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
-</code></pre></div><p>Finally, I have a lightweight server (13.5Mb) that will stream FM radio to any audio device in my house. It may have been cheaper, and would certainly have been easier, to just buy a £10 FM radio from Amazon - but where&rsquo;s the fun in that?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rtl-fm-streamer</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">dockerfile</span>: <span style="color:#ae81ff">rtl_fm_streamer.dockerfile</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">rtl-fm-streamer:${IMAGE_TAG:-latest}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">radio_streamer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">rtl-radio-test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">devices</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;/dev/bus/usb:/dev/bus/usb&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">bridge</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;2346:2346&#34;</span> <span style="color:#75715e"># HTTP Stream</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;2345:2345&#34;</span> <span style="color:#75715e"># JSON-RPC</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span></code></pre></div><p>Finally, I have a lightweight server (13.5Mb) that will stream FM radio to any audio device in my house. It may have been cheaper, and would certainly have been easier, to just buy a £10 FM radio from Amazon - but where&rsquo;s the fun in that?</p>
 <h3 id="hardware-troubles">Hardware troubles</h3>
 <p>After much trial and error through this process I&rsquo;m not 100% certain whether the steps below were ultimately required. However, at some stage I was having issues with the container &ldquo;seeing&rdquo; the SDR dongle. A bit of research suggested creating a UDEV rules file on the Docker host:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/udev/rules.d/20-rtlsdr.rules
-</code></pre></div><p>Adding the hardware:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">SUBSYSTEM==&#34;usb&#34;, ATTRS{idVendor}==&#34;0bda&#34;, ATTRS{idProduct}==&#34;2838&#34;, MODE=&#34;0666&#34;, GROUP=&#34;plugdev&#34;
-</code></pre></div><p>Then reloading the rules:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo udevadm control --reload-rules
-sudo udevadm trigger
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/udev/rules.d/20-rtlsdr.rules
+</span></span></code></pre></div><p>Adding the hardware:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>SUBSYSTEM==&#34;usb&#34;, ATTRS{idVendor}==&#34;0bda&#34;, ATTRS{idProduct}==&#34;2838&#34;, MODE=&#34;0666&#34;, GROUP=&#34;plugdev&#34;
+</span></span></code></pre></div><p>Then reloading the rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo udevadm control --reload-rules
+</span></span><span style="display:flex;"><span>sudo udevadm trigger
+</span></span></code></pre></div>
 		</div>
 	  </div>
 	
@@ -852,17 +875,17 @@ been working on and, being a <em>dotnet</em> developer, the <em>dotnet</em> CLI 
 generated my authentication token and set about publishing my app.</p>
 <p>The first problem was getting the registry and repository settings correct. Whilst DigitalOcean names the registry
 <code>registry.digitalocean.com/my-registry</code> and the repository <code>my-app</code> the required settings must be formatted differently:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;ContainerRegistry&gt;</span>registry.digitalocean.com<span style="color:#f92672">&lt;/ContainerRegistry&gt;</span>
-<span style="color:#f92672">&lt;ContainerRepository&gt;</span>my-registry/my-app<span style="color:#f92672">&lt;/ContainerRepository&gt;</span>
-</code></pre></div><p>The dotnet CLI is aware of the Docker/Podman authentication files and will pull authentication material from
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;ContainerRegistry&gt;</span>registry.digitalocean.com<span style="color:#f92672">&lt;/ContainerRegistry&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;ContainerRepository&gt;</span>my-registry/my-app<span style="color:#f92672">&lt;/ContainerRepository&gt;</span>
+</span></span></code></pre></div><p>The dotnet CLI is aware of the Docker/Podman authentication files and will pull authentication material from
 <code>~\.config\containers\auth.json</code> or <code>~\.docker\config.json</code>. I&rsquo;m obliged to use Podman in the day job, so I try to stick with that
 where possible. Authenticating to the registry with Podman is a case of providing your DigitalOcean username and an appropriate
 <a href="https://cloud.digitalocean.com/account/api/tokens">Personal Access Token</a>.</p>
-<pre tabindex="0"><code class="language-pwsh" data-lang="pwsh">podman login --authfile ~\.config\containers\auth.json -u me@example.mail.com -p my_pat_token registry.digitalocean.com
-</code></pre><p>Once that&rsquo;s done, it should be a simple command to build the container image and publish it to the registry:</p>
-<pre tabindex="0"><code class="language-pwsh" data-lang="pwsh">dotnet publish .\my-app\my-app.csproj --os linux --arch x64 /t:PublishContainer
-</code></pre><p>⛔ Nope.</p>
-<pre tabindex="0"><code>error CONTAINER1016: Unable to access the repository 'my-registry/my-app' in the registry 'registry.digitalocean.com'. Please
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-pwsh" data-lang="pwsh"><span style="display:flex;"><span>podman login --authfile ~\.config\containers\auth.json -u me@example.mail.com -p my_pat_token registry.digitalocean.com
+</span></span></code></pre></div><p>Once that&rsquo;s done, it should be a simple command to build the container image and publish it to the registry:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-pwsh" data-lang="pwsh"><span style="display:flex;"><span>dotnet publish .\my-app\my-app.csproj --os linux --arch x64 /t:PublishContainer
+</span></span></code></pre></div><p>⛔ Nope.</p>
+<pre tabindex="0"><code>error CONTAINER1016: Unable to access the repository &#39;my-registry/my-app&#39; in the registry &#39;registry.digitalocean.com&#39;. Please
 confirm your credentials are correct and that you have access to this repository and registry.
 </code></pre><p>I tried everything I could think of, different tokens, different settings, nothing worked. So, I fired up <a href="https://www.fluxzy.io/">Fluxzy</a>
 to see if I could find any clues.</p>
@@ -872,7 +895,7 @@ directly. This API handles authentication by returning <code>401 Unauthorized</c
 response header describing the required authentication flow.</p>
 <p><em>dotnet</em> CLI implements this by first issuing an unauthenticated <code>HEAD</code> request to <code>registry.digitalocean.com</code>, in response DigitalOcean
 provides its authentication requirements:</p>
-<pre tabindex="0"><code>www-authenticate: Bearer realm=&quot;https://api.digitalocean.com/v2/registry/auth&quot;,service=&quot;registry.digitalocean.com&quot;,scope=&quot;repository:my-registry/my-app:pull&quot;
+<pre tabindex="0"><code>www-authenticate: Bearer realm=&#34;https://api.digitalocean.com/v2/registry/auth&#34;,service=&#34;registry.digitalocean.com&#34;,scope=&#34;repository:my-registry/my-app:pull&#34;
 </code></pre><p>On the face of it, this is simple enough. <em>dotnet</em> should request an authentication token from <code>https://api.digitalocean.com/v2/registry/auth</code> and
 should pass <code>service=registry.digitalocean.com</code> and <code>scope=repository:my-registry/my-app:pull</code> as parameters. <em>dotnet</em> duly does this, along
 with a <code>Basic</code> authentication header containing the Docker\Podman authentication material.</p>
@@ -880,7 +903,7 @@ with a <code>Basic</code> authentication header containing the Docker\Podman aut
 <p>⛔ Nope.</p>
 <p>Look back at that <code>scope</code> parameter =&gt; <code>repository:my-registry/my-app:pull</code>. The scope suggested by DigitalOcean as a result of the <code>HEAD</code> request is
 a <code>pull</code> scope. So, when <em>dotnet</em> tries to use the resulting token to <em>push</em> the image:</p>
-<pre tabindex="0"><code>error CONTAINER1016: Unable to access the repository 'my-registry/my-app' in the registry 'registry.digitalocean.com'. Please
+<pre tabindex="0"><code>error CONTAINER1016: Unable to access the repository &#39;my-registry/my-app&#39; in the registry &#39;registry.digitalocean.com&#39;. Please
 confirm your credentials are correct and that you have access to this repository and registry.
 </code></pre><p>It seems there&rsquo;s a fundamental mismatch between how the <em>dotnet</em> CLI (version 9.0.313 at least) manages the registry authentication flow,
 and how DigitalOcean manages that same flow. It doesn&rsquo;t seem there&rsquo;s a means of altering the <em>dotnet</em> behaviour so for now, after much
@@ -952,7 +975,7 @@ wasted time and digging, it&rsquo;s a case of falling back to using <em>dotnet</
 
 		<div class="e-content">
 			 <p>The Championship is relentless so it&rsquo;s back to SMS <em>again</em>. #SaintsFC feeling the need to rotate, which is understandable, and Eckert has earnt the trust that this group can get it done. Not our strongest 11 but hopefully enough to get over the line tonight and up to 4th. ⚽</p>
-<p><img src="https://jason.dea.bz/uploads/2026/pxl-20260414-183459888.jpg" alt="A square, black and white photograph with a shallow depth of field. In the sharp foreground, a hand holds a matchday programme titled NOW IS THE TIME in large, distorted, glitch-style lettering. The programme lists upcoming fixtures for Saints vs Derby County on Saturday 11th April and Saints vs Blackburn Rovers on Tuesday 14th April 2026. The background is a blurred, high-angle view of a football stadium under bright floodlights, showing the green pitch and the surrounding stands filled with spectators. Various sponsor logos, including P&O Cruises and Garmin, are visible on the left edge of the programme."></p>
+<p><img src="https://jason.dea.bz/uploads/2026/pxl-20260414-183459888.jpg" alt="A square, black and white photograph with a shallow depth of field. In the sharp foreground, a hand holds a matchday programme titled NOW IS THE TIME in large, distorted, glitch-style lettering. The programme lists upcoming fixtures for Saints vs Derby County on Saturday 11th April and Saints vs Blackburn Rovers on Tuesday 14th April 2026. The background is a blurred, high-angle view of a football stadium under bright floodlights, showing the green pitch and the surrounding stands filled with spectators. Various sponsor logos, including P&amp;O Cruises and Garmin, are visible on the left edge of the programme."></p>
 
 		</div>
 	  </div>
@@ -2640,75 +2663,75 @@ Fiorano test track.</p>
 		<div class="e-content">
 			 <p>A little summary after working my way through 12 Belgian beers gifted to me for my birthday. Largely it&rsquo;s been an enjoyable selection with just a couple of weak offerings. Mostly, these were all new to me. The Jupiler and Duvel I&rsquo;ve seen everywhere but never tried and it&rsquo;s easy to see why they&rsquo;re popular. The St. Barnadus and Westmalle are real discoveries and I&rsquo;m really happy to have found them - they&rsquo;ll be reappearing in my future for sure!</p>
 <table>
-<thead>
-<tr>
-<th>#</th>
-<th>Beer</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://jason.dea.bz/2024/05/23/i-recently-achieved.html">1</a></td>
-<td><a href="https://www.dekoninck.be/en/beers/bolleke">De Koninck Bolleke</a></td>
-<td style="text-align:center">★★★☆☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/05/30/no-in-my.html">2</a></td>
-<td><a href="https://www.brugsezot.be/en/our-beers/brugse-zot-blond">Brugse Zot Blond</a></td>
-<td style="text-align:center">★★★☆☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/06/05/no-in-the.html">3</a></td>
-<td><a href="https://www.duvel.com/en-gb/the-beer/duvel-666">Duvel 6.66%</a></td>
-<td style="text-align:center">★★★★☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/06/17/my-birthday-is.html">4</a></td>
-<td><a href="https://www.vedett.com/en-gb/beers/pilsner/">Vedett Extra Pilsner</a></td>
-<td style="text-align:center">★★★☆☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/06/29/beer-no-is.html">5</a></td>
-<td><a href="https://chimay.com/en/beers/chimay-gold/">Chimay Gold</a></td>
-<td style="text-align:center">★★☆☆☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/07/04/beer-no-is.html">6</a></td>
-<td><a href="https://www.brasserielefebvre.be/en/beer/blanche-de-bruxelles/">Blanche de Bruxelles</a></td>
-<td style="text-align:center">★★★☆☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/07/27/beer-no-timmermans.html">7</a></td>
-<td><a href="https://brtimmermans.be/en/products/fruity/">Timmermans Lambicus Kriek Black Pepper</a></td>
-<td style="text-align:center">★★★★☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/08/27/beer-no-jupiler.html">8</a></td>
-<td><a href="https://jupiler.be/en/product/jupiler-red">Jupiler Red</a></td>
-<td style="text-align:center">★★★★★</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/09/08/beer-no-st.html">9</a></td>
-<td><a href="https://www.sintbernardus.be/en/brewery/our-beers/stbernardus-pater-6-en">St. Barnardus Pater 6</a></td>
-<td style="text-align:center">★★★★★</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/09/16/beer-no-liefmans.html">10</a></td>
-<td><a href="https://www.liefmans.com/en/craft-blends/kriek-brut">Liefmans Kriek Brut</a></td>
-<td style="text-align:center">★☆☆☆☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2024/11/07/westmalle-trappist-extra.html">11</a></td>
-<td><a href="https://www.trappistwestmalle.be/en/trappist-beer/westmalle-extra/">Westmalle Trappist Extra</a></td>
-<td style="text-align:center">★★★★☆</td>
-</tr>
-<tr>
-<td><a href="https://jason.dea.bz/2025/01/02/230252.html">12</a></td>
-<td><a href="https://leffe.com/en/beer?name=leffe-blonde">Leffe Blonde</a></td>
-<td style="text-align:center">★★★★★</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>Beer</th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/05/23/i-recently-achieved.html">1</a></td>
+          <td><a href="https://www.dekoninck.be/en/beers/bolleke">De Koninck Bolleke</a></td>
+          <td style="text-align: center">★★★☆☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/05/30/no-in-my.html">2</a></td>
+          <td><a href="https://www.brugsezot.be/en/our-beers/brugse-zot-blond">Brugse Zot Blond</a></td>
+          <td style="text-align: center">★★★☆☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/06/05/no-in-the.html">3</a></td>
+          <td><a href="https://www.duvel.com/en-gb/the-beer/duvel-666">Duvel 6.66%</a></td>
+          <td style="text-align: center">★★★★☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/06/17/my-birthday-is.html">4</a></td>
+          <td><a href="https://www.vedett.com/en-gb/beers/pilsner/">Vedett Extra Pilsner</a></td>
+          <td style="text-align: center">★★★☆☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/06/29/beer-no-is.html">5</a></td>
+          <td><a href="https://chimay.com/en/beers/chimay-gold/">Chimay Gold</a></td>
+          <td style="text-align: center">★★☆☆☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/07/04/beer-no-is.html">6</a></td>
+          <td><a href="https://www.brasserielefebvre.be/en/beer/blanche-de-bruxelles/">Blanche de Bruxelles</a></td>
+          <td style="text-align: center">★★★☆☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/07/27/beer-no-timmermans.html">7</a></td>
+          <td><a href="https://brtimmermans.be/en/products/fruity/">Timmermans Lambicus Kriek Black Pepper</a></td>
+          <td style="text-align: center">★★★★☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/08/27/beer-no-jupiler.html">8</a></td>
+          <td><a href="https://jupiler.be/en/product/jupiler-red">Jupiler Red</a></td>
+          <td style="text-align: center">★★★★★</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/09/08/beer-no-st.html">9</a></td>
+          <td><a href="https://www.sintbernardus.be/en/brewery/our-beers/stbernardus-pater-6-en">St. Barnardus Pater 6</a></td>
+          <td style="text-align: center">★★★★★</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/09/16/beer-no-liefmans.html">10</a></td>
+          <td><a href="https://www.liefmans.com/en/craft-blends/kriek-brut">Liefmans Kriek Brut</a></td>
+          <td style="text-align: center">★☆☆☆☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2024/11/07/westmalle-trappist-extra.html">11</a></td>
+          <td><a href="https://www.trappistwestmalle.be/en/trappist-beer/westmalle-extra/">Westmalle Trappist Extra</a></td>
+          <td style="text-align: center">★★★★☆</td>
+      </tr>
+      <tr>
+          <td><a href="https://jason.dea.bz/2025/01/02/230252.html">12</a></td>
+          <td><a href="https://leffe.com/en/beer?name=leffe-blonde">Leffe Blonde</a></td>
+          <td style="text-align: center">★★★★★</td>
+      </tr>
+  </tbody>
 </table>
 
 		</div>
@@ -2810,7 +2833,7 @@ Fiorano test track.</p>
 
 		<div class="e-content">
 			 <p>Another year, another panto for Last Born. Hansel and Gretel this year and a role as an evil sweet! Roll on Christmas!</p>
-<p><img src="https://jason.dea.bz/uploads/2024/pxl-20241214-142404110.jpg" alt="Set background with the title"Hansel and Gretel" and a silhouetted witch on a broomstick"></p>
+<p><img src="https://jason.dea.bz/uploads/2024/pxl-20241214-142404110.jpg" alt="Set background with the title&quot;Hansel and Gretel&quot; and a silhouetted witch on a broomstick"></p>
 
 		</div>
 	  </div>
@@ -2832,7 +2855,7 @@ Fiorano test track.</p>
 		<a href="https://jason.dea.bz/2024/12/04/often-jack-stephens-performances-for/" class="u-url"><time class="dt-published" datetime="2024-12-04 23:31:31 &#43;0100">Dec 4, 2024</time></a>
 
 		<div class="e-content">
-			 <p>Often Jack Stephens' performances for #SaintsFC are unfairly maligned. However, the captain of a team bottom of the league, with a list of injuries and suspensions, pulling hair is indefensible, juvenile, reckless behaviour. It&rsquo;s not the first time and he simply cannot be trusted. Captain no more. ⚽</p>
+			 <p>Often Jack Stephens&rsquo; performances for #SaintsFC are unfairly maligned. However, the captain of a team bottom of the league, with a list of injuries and suspensions, pulling hair is indefensible, juvenile, reckless behaviour. It&rsquo;s not the first time and he simply cannot be trusted. Captain no more. ⚽</p>
 
 		</div>
 	  </div>
@@ -4669,7 +4692,7 @@ and life against love. The world will be watching.</p>
 			 <p><a href="https://www.themoviedb.org/movie/695721">The Hunger Games: The Ballad of Songbirds &amp; Snakes</a> - <em>2023-11-20</em> - The more I think about this, the less I understand. It&rsquo;s enjoyable enough while you&rsquo;re watching it, but ultimately makes little sense and adds nothing new to the Hunger Games story. By then end, it just made me want to see the earlier films again. 🎬</p>
 <span class="og-embed-portrait">
 <blockquote>
-<p><img src="https://jason.dea.bz/uploads/2023/the-hunger-games-boss-poster.png" alt="Poster art for The Hunger Games: The Ballad of Songbirds & Snakes movie (2023)"></p>
+<p><img src="https://jason.dea.bz/uploads/2023/the-hunger-games-boss-poster.png" alt="Poster art for The Hunger Games: The Ballad of Songbirds &amp; Snakes movie (2023)"></p>
 <p><a href="https://www.themoviedb.org/">The Movie Database</a></p>
 <p><a href="https://www.themoviedb.org/movie/695721">The Hunger Games: The Ballad of Songbirds &amp; Snakes</a></p>
 <p>64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a
@@ -5047,7 +5070,7 @@ surprisingly bossy private parts urge them to go for it.</p>
 			 <p><a href="https://www.themoviedb.org/movie/666277-past-lives">Past Lives</a> - <em>2023-09-17</em> - Beautiful , gentle reflection on how we are the product of all our interactions and experiences. How what we were is not what we are, but is still a reality long after that time has passed. How we are different things in different times and places yet still a coherent singular whole. I want to watch it again, soon. You should probably watch it too. It&rsquo;s excellent. 🎬</p>
 <span class="og-embed-portrait">
 <blockquote>
-<p><img src="https://jason.dea.bz/uploads/2023/movie-past-lives.png" alt="The poster for the movie &ldquo;Past Lives (2023)""></p>
+<p><img src="https://jason.dea.bz/uploads/2023/movie-past-lives.png" alt="The poster for the movie &ldquo;Past Lives (2023)&rdquo;"></p>
 <p><a href="https://www.themoviedb.org/">The Movie Database</a></p>
 <p><a href="https://www.themoviedb.org/movie/666277-past-lives">Past Lives</a></p>
 <p>Two childhood friends are separated after one’s family emigrates from South Korea. Two decades later, they are reunited in New York for one week as they confront notions of destiny, love and the choices that make a life.</p>
